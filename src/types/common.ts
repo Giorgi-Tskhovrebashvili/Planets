@@ -45,12 +45,13 @@ export interface FooterTypes {
 
 export interface ImageType {
   image: string;
+  className: string;
 }
 
 export interface ButtonType {
-  onClick: () => void;
   number: string;
   linkName: string;
+  className: string;
 }
 
 export interface PlanetInfoType {
@@ -59,4 +60,14 @@ export interface PlanetInfoType {
   tag: string;
   link: string;
   children: string;
+}
+
+export interface CelestialBody {
+  x: number;
+  y: number;
+  radius: number;
+  orbitRadius: number;
+  angle: number;
+  speed: number;
+  image: HTMLImageElement;
 }

@@ -1,5 +1,6 @@
 import { FooterTypes } from "../../types";
 import PlanetStats from "../PlanetStats/PlanetStats";
+import styles from './Footer.module.css'
 
 const Footer = ({
   rotationTime,
@@ -12,7 +13,7 @@ const Footer = ({
   tempatureStats,
 }: FooterTypes) => {
   return (
-    <footer>
+    <footer className={styles.container}>
       <PlanetStats title={rotationTime} information={rotationStats} />
       <PlanetStats title={revolutionTime} information={revolutionStats} />
       <PlanetStats title={radius} information={radiusStats} />

@@ -1,10 +1,25 @@
 export { default as Mercury } from './Mercury/Mercury';
-export { default as MercuryMiddle } from './Mercury/MercuryMiddle'
-export {default as Venus} from './Venus/Venus';
-export {default as Earth} from './Earth/Earth';
-export {default as Mars} from './Mars/Mars';
+export { default as MercuryMiddle } from './Mercury/MercuryMiddle';
+export { default as MercuryLast } from './Mercury/MercuryLast';
+export { default as Venus } from './Venus/Venus';
+export {default as VenusMiddle} from './Venus/VenusMiddle';
+export {default as VenusLast} from './Venus/VenusLast';
+export { default as Earth } from './Earth/Earth';
+export {default as EarthMiddle} from './Earth/EarthMiddle';
+export {default as EarthLast} from './Earth/EarthLast';
+export { default as Mars } from './Mars/Mars';
+export {default as MarsMiddle} from './Mars/MarsMiddle';
+export {default as MarsLast} from './Mars/MarsLast';
 export { default as Jupiter } from './Jupiter/Jupiter';
+export { default as JupiterMiddle } from './Jupiter/JupiterMiddle';
+export { default as JupiterLast } from './Jupiter/JupiterLast';
 export { default as Saturn } from './Saturn/Saturn';
+export { default as SaturnMiddle } from './Saturn/SaturnMiddle';
+export { default as SaturnLast } from './Saturn/SaturnLast';
 export { default as Uranus } from './Uranus/Uranus';
+export { default as UranusMiddle } from './Uranus/UranusMiddle';
+export { default as UranusLast } from './Uranus/UranusLast';
 export { default as Neptune } from './Neptune/Neptune';
+export { default as NeptuneMiddle } from './Neptune/NeptuneMiddle';
+export { default as NeptuneLast } from './Neptune/NeptuneLast';
 export {default as Home} from './Landing/Landing'

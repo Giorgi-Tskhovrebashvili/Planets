@@ -1,8 +1,8 @@
 import { ImageType } from "../../types"
 
 
-const Image = ({image}: ImageType) => {
-  return <img src={image} alt="" />
+const Image = ({image, className}: ImageType) => {
+  return <img className={className} src={image} alt="" />
 }
 
 export default Image

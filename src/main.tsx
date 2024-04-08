@@ -4,15 +4,30 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {
   Earth,
+  EarthLast,
+  EarthMiddle,
   Home,
   Jupiter,
+  JupiterLast,
+  JupiterMiddle,
   Mars,
+  MarsLast,
+  MarsMiddle,
   Mercury,
+  MercuryLast,
   MercuryMiddle,
   Neptune,
+  NeptuneLast,
+  NeptuneMiddle,
   Saturn,
+  SaturnLast,
+  SaturnMiddle,
   Uranus,
+  UranusLast,
+  UranusMiddle,
   Venus,
+  VenusLast,
+  VenusMiddle,
 } from "./pages/index.ts";
 import { MainLayout } from "./components/index.ts";
 
@@ -34,10 +49,18 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/Mercury/:MercuryMiddle",
+    path: "/Mercury-structure",
     element: (
       <MainLayout>
         <MercuryMiddle />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/Mercury-geology",
+    element: (
+      <MainLayout>
+        <MercuryLast />
       </MainLayout>
     ),
   },
@@ -50,10 +73,42 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/Venus-structure",
+    element: (
+      <MainLayout>
+        <VenusMiddle />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/Venus-geology",
+    element: (
+      <MainLayout>
+        <VenusLast />
+      </MainLayout>
+    ),
+  },
+  {
     path: "/Earth",
     element: (
       <MainLayout>
         <Earth />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/Earth-structure",
+    element: (
+      <MainLayout>
+        <EarthMiddle />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/Earth-geology",
+    element: (
+      <MainLayout>
+        <EarthLast />
       </MainLayout>
     ),
   },
@@ -66,10 +121,42 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/Mars-structure",
+    element: (
+      <MainLayout>
+        <MarsMiddle />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/Mars-geology",
+    element: (
+      <MainLayout>
+        <MarsLast />
+      </MainLayout>
+    ),
+  },
+  {
     path: "/Jupiter",
     element: (
       <MainLayout>
         <Jupiter />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/Jupiter-structure",
+    element: (
+      <MainLayout>
+        <JupiterMiddle />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/Jupiter-geology",
+    element: (
+      <MainLayout>
+        <JupiterLast />
       </MainLayout>
     ),
   },
@@ -82,10 +169,42 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/Saturn-structure",
+    element: (
+      <MainLayout>
+        <SaturnMiddle />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/Saturn-geology",
+    element: (
+      <MainLayout>
+        <SaturnLast />
+      </MainLayout>
+    ),
+  },
+  {
     path: "/Uranus",
     element: (
       <MainLayout>
         <Uranus />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/Uranus-structure",
+    element: (
+      <MainLayout>
+        <UranusMiddle />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/Uranus-geology",
+    element: (
+      <MainLayout>
+        <UranusLast />
       </MainLayout>
     ),
   },
@@ -98,10 +217,24 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "*",
+    path: "/Neptune-structure",
     element: (
-      <h1 style={{color: 'red'}}>Page Not Found</h1>
+      <MainLayout>
+        <NeptuneMiddle />
+      </MainLayout>
     ),
+  },
+  {
+    path: "/Neptune-geology",
+    element: (
+      <MainLayout>
+        <NeptuneLast />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "*",
+    element: <h1 style={{ color: "red" }}>Page Not Found</h1>,
   },
 ]);
 

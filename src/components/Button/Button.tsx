@@ -1,7 +1,13 @@
-import { ButtonType } from "../../types"
+import { ButtonType } from "../../types";
+import styles from './Button.module.css'
 
-const Button = ({onClick, number, linkName}: ButtonType) => {
-    return <button onClick={onClick}>{number}<p>{linkName}</p></button>
-}
+const Button = ({ number, linkName, className }: ButtonType) => {
+  return (
+    <button className={className}>
+      <p className={styles.number}>{number}</p>
+      <p className={styles.name}>{linkName}</p>
+    </button>
+  );
+};
 
-export default Button
+export default Button;
