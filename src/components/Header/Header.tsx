@@ -5,7 +5,9 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-          <Link to="/" className={styles.link}>THE PLANETS</Link>
+        <Link to="/" className={styles.link}>
+          THE PLANETS
+        </Link>
         <ul className={styles.menu}>
           <li className={styles.mercury}>
             <Link to="/Mercury">Mercury</Link>

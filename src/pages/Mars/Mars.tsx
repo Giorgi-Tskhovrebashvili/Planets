@@ -4,7 +4,7 @@ import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
 import { Link } from "react-router-dom";
 import overview from "../../assets/MarsImages/Mars.png";
-import styles from './Mars.module.css';
+import styles from "./Mars.module.css";
 
 const Mars = () => {
   const [data] = useState<PlanetType[]>(JasonData);

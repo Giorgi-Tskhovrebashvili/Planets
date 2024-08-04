@@ -4,7 +4,7 @@ import { PlanetInfo, Button, Footer, Image } from "../../components";
 import JasonData from "../../data/data.json";
 import geology from "../../assets/MercuryImages/mercuryLast.png";
 import { Link } from "react-router-dom";
-import styles from './Mercury.module.css'
+import styles from "./Mercury.module.css";
 
 const MercuryLast = () => {
   const [data] = useState<PlanetType[]>(JasonData);
@@ -58,7 +58,10 @@ const MercuryLast = () => {
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.structure} to={"/Mercury-structure"}>
+                    <Link
+                      className={styles.structure}
+                      to={"/Mercury-structure"}
+                    >
                       <Button
                         number={"02"}
                         linkName={"INTERNAL STRUCTURE"}

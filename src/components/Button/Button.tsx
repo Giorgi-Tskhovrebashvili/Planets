@@ -1,5 +1,5 @@
 import { ButtonType } from "../../types";
-import styles from './Button.module.css'
+import styles from "./Button.module.css";
 
 const Button = ({ number, linkName, className }: ButtonType) => {
   return (

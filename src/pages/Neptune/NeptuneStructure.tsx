@@ -3,10 +3,10 @@ import { Footer, Image, Button, PlanetInfo } from "../../components";
 import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
 import { Link } from "react-router-dom";
-import geology from '../../assets/NeptuneImages/neptuneLast.png';
-import styles from './Neptune.module.css';
+import structure from "../../assets/NeptuneImages/neptuneMiddle.png";
+import styles from "./Neptune.module.css";
 
-const NeptuneLast = () => {
+const NeptuneMiddle = () => {
   const [data] = useState<PlanetType[]>(JasonData);
   return (
     <div>
@@ -40,14 +40,14 @@ const NeptuneLast = () => {
                   </Link>
                 </div>
                 <div className={styles.imageContainer}>
-                  <Image image={geology} className={styles.img} />
+                  <Image image={structure} className={styles.img} />
                 </div>
                 <div className={styles.infoContainer}>
                   <PlanetInfo
                     title={fact.name}
-                    info={fact.geology.content}
+                    info={fact.structure.content}
                     tag={"Source : "}
-                    link={fact.geology.source}
+                    link={fact.structure.source}
                     children={"Wikipedia"}
                   />
                   <div className={styles.desktop}>
@@ -58,7 +58,10 @@ const NeptuneLast = () => {
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.structure} to={"/Neptune-structure"}>
+                    <Link
+                      className={styles.structure}
+                      to={"/Neptune-structure"}
+                    >
                       <Button
                         number={"02"}
                         linkName={"INTERNAL STRUCTURE"}
@@ -92,4 +95,4 @@ const NeptuneLast = () => {
   );
 };
 
-export default NeptuneLast;
+export default NeptuneMiddle;

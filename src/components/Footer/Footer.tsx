@@ -1,6 +1,6 @@
 import { FooterTypes } from "../../types";
 import PlanetStats from "../PlanetStats/PlanetStats";
-import styles from './Footer.module.css'
+import styles from "./Footer.module.css";
 
 const Footer = ({
   rotationTime,

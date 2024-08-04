@@ -3,35 +3,35 @@ import { Footer, Image, Button, PlanetInfo } from "../../components";
 import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
 import { Link } from "react-router-dom";
-import geology from '../../assets/SaturnImages/saturnLast.png';
-import styles from './Saturn.module.css';
+import structure from "../../assets/UranusImages/uranusMiddle.png";
+import styles from "./Uranus.module.css";
 
-const SaturnLast = () => {
+const UranusMiddle = () => {
   const [data] = useState<PlanetType[]>(JasonData);
   return (
     <div>
       {data
-        .filter((item) => item.name === "Saturn")
+        .filter((item) => item.name === "Uranus")
         .map((fact) => {
           return (
             <div className={styles.container}>
               <div className={styles.planetContainer}>
                 <div className={styles.mobile}>
-                  <Link to={"/Saturn"}>
+                  <Link to={"/Uranus"}>
                     <Button
                       number={""}
                       linkName={"OVERVIEW"}
                       className={styles.mobileBtn}
                     />
                   </Link>
-                  <Link to={"/Saturn-structure"}>
+                  <Link to={"/Uranus-structure"}>
                     <Button
                       number={""}
                       linkName={"STRUCTURE"}
                       className={styles.mobileBtn}
                     />
                   </Link>
-                  <Link to={"/Saturn-geology"}>
+                  <Link to={"/Uranus-geology"}>
                     <Button
                       number={""}
                       linkName={"SURFACE"}
@@ -40,32 +40,32 @@ const SaturnLast = () => {
                   </Link>
                 </div>
                 <div className={styles.imageContainer}>
-                  <Image image={geology} className={styles.img} />
+                  <Image image={structure} className={styles.img} />
                 </div>
                 <div className={styles.infoContainer}>
                   <PlanetInfo
                     title={fact.name}
-                    info={fact.geology.content}
+                    info={fact.structure.content}
                     tag={"Source : "}
-                    link={fact.geology.source}
+                    link={fact.structure.source}
                     children={"Wikipedia"}
                   />
                   <div className={styles.desktop}>
-                    <Link className={styles.overview} to={"/Saturn"}>
+                    <Link className={styles.overview} to={"/Uranus"}>
                       <Button
                         number={"01"}
                         linkName={"OVERVIEW"}
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.structure} to={"/Saturn-structure"}>
+                    <Link className={styles.structure} to={"/Uranus-structure"}>
                       <Button
                         number={"02"}
                         linkName={"INTERNAL STRUCTURE"}
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.geology} to={"/Saturn-geology"}>
+                    <Link className={styles.geology} to={"/Uranus-geology"}>
                       <Button
                         number={"03"}
                         linkName={"SURFACE GEOLOGY"}
@@ -92,4 +92,4 @@ const SaturnLast = () => {
   );
 };
 
-export default SaturnLast;
+export default UranusMiddle;

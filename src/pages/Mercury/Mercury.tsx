@@ -4,7 +4,7 @@ import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
 import overview from "../../assets/MercuryImages/Mercury.png";
 import { Link } from "react-router-dom";
-import styles from './Mercury.module.css';
+import styles from "./Mercury.module.css";
 
 const Mercury = () => {
   const [data] = useState<PlanetType[]>(JasonData);
@@ -59,7 +59,10 @@ const Mercury = () => {
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.structure} to={"/Mercury-structure"}>
+                    <Link
+                      className={styles.structure}
+                      to={"/Mercury-structure"}
+                    >
                       <Button
                         number={"02"}
                         linkName={"INTERNAL STRUCTURE"}

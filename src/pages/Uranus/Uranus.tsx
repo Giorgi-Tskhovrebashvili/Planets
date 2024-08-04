@@ -3,8 +3,8 @@ import { Footer, Image, Button, PlanetInfo } from "../../components";
 import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
 import { Link } from "react-router-dom";
-import overview from '../../assets/UranusImages/Uranus.png';
-import styles from './Uranus.module.css';
+import overview from "../../assets/UranusImages/Uranus.png";
+import styles from "./Uranus.module.css";
 
 const Uranus = () => {
   const [data] = useState<PlanetType[]>(JasonData);

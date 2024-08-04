@@ -3,18 +3,18 @@ import { Footer, Image, Button, PlanetInfo } from "../../components";
 import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
 import { Link } from "react-router-dom";
-import geology from '../../assets/MarsImages/marsLast.png';
-import styles from './Mars.module.css';
+import structure from "../../assets/MarsImages/marsMiddle.png";
+import styles from "./Mars.module.css";
 
-const MarsLast = () => {
-    const [data] = useState<PlanetType[]>(JasonData);
-    return (
-      <div>
-        {data
-          .filter((item) => item.name === "Mars")
-          .map((fact) => {
-            return (
-              <div className={styles.container}>
+const MarsMiddle = () => {
+  const [data] = useState<PlanetType[]>(JasonData);
+  return (
+    <div>
+      {data
+        .filter((item) => item.name === "Mars")
+        .map((fact) => {
+          return (
+            <div className={styles.container}>
               <div className={styles.planetContainer}>
                 <div className={styles.mobile}>
                   <Link to={"/Mars"}>
@@ -40,14 +40,14 @@ const MarsLast = () => {
                   </Link>
                 </div>
                 <div className={styles.imageContainer}>
-                  <Image image={geology} className={styles.img} />
+                  <Image image={structure} className={styles.img} />
                 </div>
                 <div className={styles.infoContainer}>
                   <PlanetInfo
                     title={fact.name}
-                    info={fact.geology.content}
+                    info={fact.structure.content}
                     tag={"Source : "}
-                    link={fact.geology.source}
+                    link={fact.structure.source}
                     children={"Wikipedia"}
                   />
                   <div className={styles.desktop}>
@@ -86,10 +86,10 @@ const MarsLast = () => {
                 tempatureStats={fact.temperature}
               />
             </div>
-            );
-          })}
-      </div>
-    );
-}
+          );
+        })}
+    </div>
+  );
+};
 
-export default MarsLast;
+export default MarsMiddle;

@@ -3,8 +3,8 @@ import { Footer, Image, Button, PlanetInfo } from "../../components";
 import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
 import { Link } from "react-router-dom";
-import overview from '../../assets/NeptuneImages/Neptune.png';
-import styles from './Neptune.module.css';
+import overview from "../../assets/NeptuneImages/Neptune.png";
+import styles from "./Neptune.module.css";
 
 const Neptune = () => {
   const [data] = useState<PlanetType[]>(JasonData);
@@ -58,7 +58,10 @@ const Neptune = () => {
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.structure} to={"/Neptune-structure"}>
+                    <Link
+                      className={styles.structure}
+                      to={"/Neptune-structure"}
+                    >
                       <Button
                         number={"02"}
                         linkName={"INTERNAL STRUCTURE"}

@@ -3,8 +3,8 @@ import { Footer, Image, Button, PlanetInfo } from "../../components";
 import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
 import { Link } from "react-router-dom";
-import overview from '../../assets/JupiterImages/Jupiter.png';
-import styles from './Jupiter.module.css';
+import overview from "../../assets/JupiterImages/Jupiter.png";
+import styles from "./Jupiter.module.css";
 
 const Jupiter = () => {
   const [data] = useState<PlanetType[]>(JasonData);
@@ -58,7 +58,10 @@ const Jupiter = () => {
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.structure} to={"/Jupiter-structure"}>
+                    <Link
+                      className={styles.structure}
+                      to={"/Jupiter-structure"}
+                    >
                       <Button
                         number={"02"}
                         linkName={"INTERNAL STRUCTURE"}

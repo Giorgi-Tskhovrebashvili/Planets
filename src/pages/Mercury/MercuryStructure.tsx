@@ -1,37 +1,37 @@
 import { useState } from "react";
-import { Footer, Image, Button, PlanetInfo } from "../../components";
-import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
+import { PlanetInfo, Button, Footer, Image } from "../../components";
+import JasonData from "../../data/data.json";
+import structure from "../../assets/MercuryImages/mercuryMiddle.png";
 import { Link } from "react-router-dom";
-import structure from '../../assets/MarsImages/marsMiddle.png';
-import styles from './Mars.module.css';
+import styles from "./Mercury.module.css";
 
-const MarsMiddle = () => {
-    const [data] = useState<PlanetType[]>(JasonData);
-    return (
-      <div>
-        {data
-          .filter((item) => item.name === "Mars")
-          .map((fact) => {
-            return (
-              <div className={styles.container}>
+const MercuryMiddle = () => {
+  const [data] = useState<PlanetType[]>(JasonData);
+  return (
+    <div>
+      {data
+        .filter((item) => item.name === "Mercury")
+        .map((fact) => {
+          return (
+            <div className={styles.container}>
               <div className={styles.planetContainer}>
                 <div className={styles.mobile}>
-                  <Link to={"/Mars"}>
+                  <Link to={"/Mercury"}>
                     <Button
                       number={""}
                       linkName={"OVERVIEW"}
                       className={styles.mobileBtn}
                     />
                   </Link>
-                  <Link to={"/Mars-structure"}>
+                  <Link to={"/Mercury-structure"}>
                     <Button
                       number={""}
                       linkName={"STRUCTURE"}
                       className={styles.mobileBtn}
                     />
                   </Link>
-                  <Link to={"/Mars-geology"}>
+                  <Link to={"/Mercury-geology"}>
                     <Button
                       number={""}
                       linkName={"SURFACE"}
@@ -51,21 +51,24 @@ const MarsMiddle = () => {
                     children={"Wikipedia"}
                   />
                   <div className={styles.desktop}>
-                    <Link className={styles.overview} to={"/Mars"}>
+                    <Link className={styles.overview} to={"/Mercury"}>
                       <Button
                         number={"01"}
                         linkName={"OVERVIEW"}
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.structure} to={"/Mars-structure"}>
+                    <Link
+                      className={styles.structure}
+                      to={"/Mercury-structure"}
+                    >
                       <Button
                         number={"02"}
                         linkName={"INTERNAL STRUCTURE"}
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.geology} to={"/Mars-geology"}>
+                    <Link className={styles.geology} to={"/Mercury-geology"}>
                       <Button
                         number={"03"}
                         linkName={"SURFACE GEOLOGY"}
@@ -86,10 +89,10 @@ const MarsMiddle = () => {
                 tempatureStats={fact.temperature}
               />
             </div>
-            );
-          })}
-      </div>
-    );
-}
+          );
+        })}
+    </div>
+  );
+};
 
-export default MarsMiddle;
+export default MercuryMiddle;

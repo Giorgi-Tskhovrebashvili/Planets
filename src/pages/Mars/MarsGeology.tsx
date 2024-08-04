@@ -3,35 +3,35 @@ import { Footer, Image, Button, PlanetInfo } from "../../components";
 import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
 import { Link } from "react-router-dom";
-import structure from '../../assets/VenusImages/venusMiddle.png';
-import styles from './Venus.module.css';
+import geology from "../../assets/MarsImages/marsLast.png";
+import styles from "./Mars.module.css";
 
-const VenusMiddle = () => {
+const MarsLast = () => {
   const [data] = useState<PlanetType[]>(JasonData);
   return (
     <div>
       {data
-        .filter((item) => item.name === "Venus")
+        .filter((item) => item.name === "Mars")
         .map((fact) => {
           return (
             <div className={styles.container}>
               <div className={styles.planetContainer}>
                 <div className={styles.mobile}>
-                  <Link to={"/Venus"}>
+                  <Link to={"/Mars"}>
                     <Button
                       number={""}
                       linkName={"OVERVIEW"}
                       className={styles.mobileBtn}
                     />
                   </Link>
-                  <Link to={"/Venus-structure"}>
+                  <Link to={"/Mars-structure"}>
                     <Button
                       number={""}
                       linkName={"STRUCTURE"}
                       className={styles.mobileBtn}
                     />
                   </Link>
-                  <Link to={"/Venus-geology"}>
+                  <Link to={"/Mars-geology"}>
                     <Button
                       number={""}
                       linkName={"SURFACE"}
@@ -40,32 +40,32 @@ const VenusMiddle = () => {
                   </Link>
                 </div>
                 <div className={styles.imageContainer}>
-                  <Image image={structure} className={styles.img} />
+                  <Image image={geology} className={styles.img} />
                 </div>
                 <div className={styles.infoContainer}>
                   <PlanetInfo
                     title={fact.name}
-                    info={fact.structure.content}
+                    info={fact.geology.content}
                     tag={"Source : "}
-                    link={fact.structure.source}
+                    link={fact.geology.source}
                     children={"Wikipedia"}
                   />
                   <div className={styles.desktop}>
-                    <Link className={styles.overview} to={"/Venus"}>
+                    <Link className={styles.overview} to={"/Mars"}>
                       <Button
                         number={"01"}
                         linkName={"OVERVIEW"}
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.structure} to={"/Venus-structure"}>
+                    <Link className={styles.structure} to={"/Mars-structure"}>
                       <Button
                         number={"02"}
                         linkName={"INTERNAL STRUCTURE"}
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.geology} to={"/Venus-geology"}>
+                    <Link className={styles.geology} to={"/Mars-geology"}>
                       <Button
                         number={"03"}
                         linkName={"SURFACE GEOLOGY"}
@@ -92,4 +92,4 @@ const VenusMiddle = () => {
   );
 };
 
-export default VenusMiddle;
+export default MarsLast;

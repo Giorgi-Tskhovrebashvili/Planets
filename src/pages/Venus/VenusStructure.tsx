@@ -3,35 +3,35 @@ import { Footer, Image, Button, PlanetInfo } from "../../components";
 import JasonData from "../../data/data.json";
 import { PlanetType } from "../../types";
 import { Link } from "react-router-dom";
-import structure from '../../assets/SaturnImages/saturnMiddle.png';
-import styles from './Saturn.module.css';
+import structure from "../../assets/VenusImages/venusMiddle.png";
+import styles from "./Venus.module.css";
 
-const SaturnMiddle = () => {
+const VenusMiddle = () => {
   const [data] = useState<PlanetType[]>(JasonData);
   return (
     <div>
       {data
-        .filter((item) => item.name === "Saturn")
+        .filter((item) => item.name === "Venus")
         .map((fact) => {
           return (
             <div className={styles.container}>
               <div className={styles.planetContainer}>
                 <div className={styles.mobile}>
-                  <Link to={"/Saturn"}>
+                  <Link to={"/Venus"}>
                     <Button
                       number={""}
                       linkName={"OVERVIEW"}
                       className={styles.mobileBtn}
                     />
                   </Link>
-                  <Link to={"/Saturn-structure"}>
+                  <Link to={"/Venus-structure"}>
                     <Button
                       number={""}
                       linkName={"STRUCTURE"}
                       className={styles.mobileBtn}
                     />
                   </Link>
-                  <Link to={"/Saturn-geology"}>
+                  <Link to={"/Venus-geology"}>
                     <Button
                       number={""}
                       linkName={"SURFACE"}
@@ -51,21 +51,21 @@ const SaturnMiddle = () => {
                     children={"Wikipedia"}
                   />
                   <div className={styles.desktop}>
-                    <Link className={styles.overview} to={"/Saturn"}>
+                    <Link className={styles.overview} to={"/Venus"}>
                       <Button
                         number={"01"}
                         linkName={"OVERVIEW"}
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.structure} to={"/Saturn-structure"}>
+                    <Link className={styles.structure} to={"/Venus-structure"}>
                       <Button
                         number={"02"}
                         linkName={"INTERNAL STRUCTURE"}
                         className={styles.desktopBtn}
                       />
                     </Link>
-                    <Link className={styles.geology} to={"/Saturn-geology"}>
+                    <Link className={styles.geology} to={"/Venus-geology"}>
                       <Button
                         number={"03"}
                         linkName={"SURFACE GEOLOGY"}
@@ -92,4 +92,4 @@ const SaturnMiddle = () => {
   );
 };
 
-export default SaturnMiddle;
+export default VenusMiddle;
